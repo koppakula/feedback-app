@@ -9,7 +9,8 @@ def index():
     if request.method == "POST":
         name = request.form["name"]
         comment = request.form["comment"]
-        feedback_list.append({"name": name, "comment": comment})
+        employee_id=request.form["employee_id"]
+        feedback_list.append({"name": name, "comment": comment, "employee_id": employee_id})
         return redirect("/feedback")
     return render_template("index.html")
 
