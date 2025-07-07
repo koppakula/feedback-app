@@ -1,4 +1,4 @@
-from app import app
+from run import app
 
 def test_homepage_loads():
     client = app.test_client()
